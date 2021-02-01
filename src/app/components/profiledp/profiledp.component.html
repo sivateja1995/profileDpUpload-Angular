@@ -1,0 +1,11 @@
+<div class="col-md-3 img-c">
+  <img  class="image"    [src]="imageurl" alt="">
+  <div>
+    <form #upload="ngForm" (ngSubmit)="uploadExcel(upload.value)">
+      <input type="file" name="image" (change)="fileUpload($event)" ngModel>
+      <div>
+        <button class="btn btn-success mt-4" type="submit" *ngIf="showUploadBtn">Upload</button>
+      </div>
+    </form>
+  </div>
+</div>
